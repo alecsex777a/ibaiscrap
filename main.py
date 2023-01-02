@@ -56,7 +56,7 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0+12]
-    bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
+    bin = requests.get(f'https://www.binapi.co.uk/bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
