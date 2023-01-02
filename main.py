@@ -63,18 +63,24 @@ async def my_event_handler(m):
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-╔═══════════════════════╗
-╟ ● **Scrapper** 
-╟═══════════════════════╝
-╟ ● __CC__:
-╟ ╙ `{cc}|{mes}|{ano}|{cvv}`
-╟ ● __INFO__:
-╟ ╙ {bin_json['vendor']} - {bin_json['type']} - {bin_json['level']}
-╟ ╙ {bin_json['bank']}
-╟ ╙ {bin_json['country_iso']} - {bin_json['flag']}
-╟ ● __FULL INFO__:
-╟ ╙ {fullinfo}
-╚═══════════════════════╝
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+             **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
+**Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
+
+**Status ➪ Approved! ✅**
+
+— — — — — — — — — — — — — — —
+               **☘ INFO CARD ☘**
+— — — — — — — — — — — — — — —
+
+[🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - `{cc[:6]}`
+[🝂] 𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
+[🝂] 𝘽𝙖𝙣𝙠 - `{bin_json['bank']}`
+[🝂] 𝘾𝙤𝙪𝙣𝙩𝙧𝙮 - `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
+━━━━━━━━━━━━━━━━
+[🝂] 𝗘𝘅𝘁𝗿𝗮 `{extra}xxxx|{mes}|{ano}|rnd`
+━━━━━━━━━━━━━━━━
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
