@@ -24,6 +24,7 @@ chats  = [
     '@onyxlivesempire',
     '@CcsTeamUrban1',
     '@TEST123ND',
+    '@alvkslspqpqpqoqqq',
     '@Xenoncommunity1'   
 ]
 
