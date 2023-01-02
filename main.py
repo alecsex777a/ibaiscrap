@@ -86,7 +86,7 @@ async def my_event_handler(m):
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, file = 'ibai.jpg')
+    await client.send_message(SEND_CHAT, text, file = 'photo.jpg')
 
 
 
