@@ -8,6 +8,7 @@ from random_address import real_random_address
 import names
 from datetime import datetime
 import random
+from time import sleep
 
 
 from defs import getUrl, getcards, phone
@@ -87,7 +88,7 @@ async def my_event_handler(m):
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
     await client.send_message(SEND_CHAT, text, file = 'ibai-koi.mp4')
-
+    time.sleep(60)
 
 
 
