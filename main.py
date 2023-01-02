@@ -11,20 +11,20 @@ import random
 
 
 from defs import getUrl, getcards, phone
-API_ID =  1667849
-API_HASH = 'b719710209932bff18219f4064e92388'
-SEND_CHAT = '@cyph33'
+API_ID =  20597671
+API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
+SEND_CHAT = -1001850450912
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@uchihaworld',
-    '@ScrapperLost',
-    '@JLScrapper',
-    '@MacacosCC',
-    '@LiveCCFam'   
+    '@cclivesblackeagle',
+    '@onyxlivesempire',
+    '@CcsTeamUrban1',
+    '@TEST123ND',
+    '@Xenoncommunity1'   
 ]
 
 with open('cards.txt', 'r') as r:
@@ -55,6 +55,7 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
+    extra = cc[0:0+12]
     bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
     if not bin:
         return
@@ -78,7 +79,7 @@ async def my_event_handler(m):
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, link_preview = False)
+    await client.send_message(SEND_CHAT, text, file = 'ibai.jpg')
 
 
 
