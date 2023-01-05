@@ -14,20 +14,26 @@ from time import sleep
 from defs import getUrl, getcards, phone
 API_ID =  20597671
 API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
-SEND_CHAT = -1001850450912
+SEND_CHAT = '@Scrapperleonbinner'
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@cclivesblackeagle',
-    '@onyxlivesempire',
-    '@CcsTeamUrban1',
-    '@TEST123ND',
-    '@SitesYCCS',
-    '@alvkslspqpqpqoqqq',
-    '@Xenoncommunity1'   
+    '@LalaScrap',                                                         '@SitesCCSChat',
+    '@DollyBinsChat',
+    '@secretgroup01',
+    '@latienditadenigthwing',
+    '@BlindScrap',
+    '@CCsdiarioss',
+    '@savagegroupoficial',
+    '@RemChatChk',
+    '@accerroreschecker',
+    '@Venexchk',
+    '@CHKBINS',
+    '@LigthStormChat',
+    '@cardesclub',                                                       '@CHKBINS',                                                     '@LigthStormChat',                                                          '@cardesclub'   
 ]
 
 with open('cards.txt', 'r') as r:
