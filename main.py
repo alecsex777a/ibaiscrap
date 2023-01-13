@@ -21,19 +21,7 @@ ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@LalaScrap',                                                         '@SitesCCSChat',
-    '@DollyBinsChat',
-    '@secretgroup01',
-    '@latienditadenigthwing',
-    '@BlindScrap',
-    '@CCsdiarioss',
-    '@savagegroupoficial',
-    '@RemChatChk',
-    '@accerroreschecker',
-    '@Venexchk',
-    '@CHKBINS',
-    '@LigthStormChat',
-    '@cardesclub',                                                       '@CHKBINS',                                                     '@LigthStormChat',                                                          '@cardesclub'   
+    '@qkkkkkkpeluax'                                                '@CHKBINS',                                                     '@LigthStormChat',                                                          '@cardesclub'   
 ]
 
 with open('cards.txt', 'r') as r:
@@ -65,30 +53,33 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0+12]
-    bin = requests.get(f'https://www.binapi.co.uk/bin={cc[:6]}')
+    bin = requests.get(f'https://lookup.binlist.net/{cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-💵 𝘾𝘾: `{cc}|{mes}|{ano}|{cvv}`
+━━━━━━ ❴🇨🇴❵ ━━━━━━
+   🌱 𝑴𝑨𝑭𝑰𝑨 𝑺𝑪𝑹𝑨𝑷𝑷𝑬𝑹 🌱
+━━━━━━ ❴🇨🇴❵ ━━━━━━
+[●] Card ✅: `{cc}|{mes}|{ano}|{cvv}`
+[●] Status ➪ Approved! ✅
+━━━━[INFORMATION]━━━━
 
-📝𝘽𝙄𝙉 𝙄𝙉𝙁𝙊: `{cc[:6]}` {bin_json['brand']} - {bin_json['type']} - {bin_json['level']}
+- ☘ `{bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']}`
+- ❄️ `{bin_json['bank']['name']}`
+- 🏙 `{bin_json['country']['name']} - {bin_json['country']['emoji']}`
 
-`{bin_json['bank']}`
-
-𝘾𝙊𝙐𝙉𝙏𝙍𝙔: `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
-
-𝙀𝙓𝙏𝙍𝘼 `{extra}xxxx|{mes}|{ano}|rnd`
-
-𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
+━━━━━━ ❴🇨🇴❵ ━━━━━━
+- [●] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|rnd`
+- [●] 𝙊𝙬𝙣𝙚𝙧 : @NicolasRiosYTT
+━━━━━━ ❴🇨🇴❵ ━━━━━━
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, file = 'logo.png')
-    time.sleep(5)
+    await client.send_message(SEND_CHAT, text, file = 'nico.jpg')
 
 
 
