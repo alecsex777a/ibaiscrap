@@ -21,7 +21,7 @@ ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@qkkkkkkpeluax'                                                '@CHKBINS',                                                     '@LigthStormChat',                                                          '@cardesclub'   
+    '@qkkkkkkpeluax'
 ]
 
 with open('cards.txt', 'r') as r:
