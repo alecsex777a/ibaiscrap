@@ -12,9 +12,9 @@ from time import sleep
 
 
 from defs import getUrl, getcards, phone
-API_ID =  20597671
-API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
-SEND_CHAT = '@Scrapperleonbinner'
+API_ID =  23500211
+API_HASH = '16c6538f21d16cbf861c30e581eba780'
+SEND_CHAT = -1001880176512
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
